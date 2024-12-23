@@ -21,7 +21,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+        
       - name: Run lint
         run: ./gradlew lintDebug
         
